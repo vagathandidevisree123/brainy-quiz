@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz app">
+    <link rel="icon" href="quiz_icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul {
+list-style-type: none;
+overflow: hidden;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: x-large;
+}
+
+li a:hover:not(.active) {
+background-color:#04AA6D;
+}
+#main{
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+    </style>
+
+    <title>Quiz App</title>
+</head>
+<body>
+    <br>
+    <img src=" images/quiz time"  height="100" width="200"   >
+    <ul> 
+        <li><a  href="Home.html">Home</a></li>
+        <li><a href="form.html">Login</a></li>
+        <li><a  href="Topics.html">Topics</a></li>
+        <li><a href="Review.html">Review</a></li>
+      </ul>
+      <div>
+    <h1 id="main">Welcome to the Quiz!</h1>
+    <h4>Hello and welcome to our exciting quiz!<br>
+     Are you ready to test your knowledge and have some fun?<br>
+    We have a range of interesting and challenging questions waiting for you......</h4>
+    <h1 id="main">Wishing you all the best!</h1>
+    <h4>May the odds be in your favor!<br>
+         We hope you enjoy the quiz and learn something new along the way.<br>
+          Good luck and have fun!</h4>
+      
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+    <div class="start" id="start">
+        <button style="background-color: black;color:white;">Start Quiz</button>
+    </div>
+    <div class="rules" id="rules">
+        <div class="rules_heading" id="rules_heading">
+             <strong>Quiz Rules</strong> 
+        </div>
+    
+        <div class="rule_body" id="rule_body" data-anijs="if: click, do: flip animated, to: $closest target, after: $removeAnim" >
+            <p>   1. You will have only <span style="color:red"> 15 seconds</span> for entire question.</p>
+            <p> 2. Once you select your answer, it can't be undone.</p>
+            <p> 3. You can't select any option once time goes off.</p>
+            <p>4. You can't exit from the Quiz while you're playing.</p>
+            <p>5. Though it is easy level the questions are in basic standard</p>
+            <p>  6. You'll get points on the basis of your correct answers.</p>
+            <p>7. There are totally 20 questions in Beginner level</p>
+        </div>
+   
+        <div class="rules_footer" id='rules_footer'>
+            <button class="exit_btn" id="exit_btn">Exit Quiz</button>
+            <button class="continue_btn" id="continue_btn">Continue Quiz</button>
+        </div>  
+
+    </div>
+
+    <div class="quiz_container" id="quiz_container">
+        <header>
+            <div><h2><strong>Quiz Application</strong></h2></div>
+            <div class="time_wrapper">
+                <span class="time_left_text" id="time_left_text">Time left</span>
+                <span class="time" id="time">: 300</span>
+            </div>
+        </header>
+        <section>
+            <div class="quiz_question" id="quiz_question">
+               <!-- <h3 class="question_heading" id="question_heading">  <span>1.</span> What does HTML stand for?</h3>   -->
+            </div>
+            <div class="question_option_wrapper" id="question_option_wrapper">
+                <!-- 
+                <div class="question_options" id="question_options">
+                    <div class="option" id="option">Hyper Tool Multi Language</div>
+                    <div class="tickCross_wrapper">
+                        <span class="tickIcon" id="tickIcon"><i class="fas fa-check-circle" style="font-size: 25px;"></i></span>
+                        <span class="crossIcon" id="crossIcon"><i class="far fa-times-circle" style="font-size: 25px;"></i></span>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <footer>
+            <span class="question_count" id="question_count">1 of 5</span>
+            <button class="next_btn" id="next_btn">Next Question</button>
+        </footer>
+    </div>  
+    
+
+    <div class="result_container" id="result_container">
+        <i class="fas fa-crown" style="font-size: 200px; margin-top: 10px;"></i>
+       <h1>Congratulation!!! </h1> 
+       <p id="que_answer_text"></p>
+       <div class="footer_replay_quit">
+            <!-- <button class="replay_btn" id="replay_btn">Replay</button> -->
+            <a href="Review.html">  <button class="quit_btn" id="quit_btn">Quit</button></a> 
+       </div>
+       
+    </div>
+
+
+    <!-- <script src="https://use.fontawesome.com/132f477c1a.js"></script> -->
+    
+   <script src="main.js"></script>
+   <script src="questions10.js"></script>
+  
+ 
+</body>
+</body>
+</html>
